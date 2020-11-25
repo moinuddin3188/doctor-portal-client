@@ -1,0 +1,8 @@
+@media(max-width: 992px) {
+    .appointment-header {
+        background-image: url('../../../images/Mask\ Group\ 2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 50px;
+    }
+}

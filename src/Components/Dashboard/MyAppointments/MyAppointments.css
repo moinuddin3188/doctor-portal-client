@@ -1,0 +1,12 @@
+.my-appointments-container {
+    background-color: #f4fdfb;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    min-width: 550px;
+}
+.my-appointments {
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 30px;
+    margin-top: 60px;
+}

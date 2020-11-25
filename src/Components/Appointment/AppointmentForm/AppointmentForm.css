@@ -1,0 +1,23 @@
+.ReactModal__Overlay {
+    background-color: #0000007c !important;
+}
+#modal {
+    padding: 30px 50px 50px 50px !important;
+}
+#modal h2 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    color: #19d3af;
+}
+.send-btn {
+    padding: 8px 45px;
+    font-size: 13px;
+}
+#modal input {
+    margin-top: 10px;
+    font-size: 13px;
+    height: 40px;
+}
+#modal span {
+    font-size: 11px;
+}

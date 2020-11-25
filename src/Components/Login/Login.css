@@ -1,0 +1,51 @@
+.login-form {
+    box-shadow: 3px 3px 15px #ebebeb;
+    padding: 50px;
+    width: 430px
+}
+.login-form input {
+    width: 100%;
+    border: none;
+    margin-top: 15px;
+    border-bottom: 1px solid lightgray;
+    font-size: 11px;
+    height: 40px;
+    color: gray;
+    background: none;
+}
+.login-form input[type="submit"] {
+    background-image: linear-gradient(90deg, #19d3af, #0fcfeb);
+    color: #fff;
+}
+.login-form .forgot-password {
+    color: blue;
+    text-decoration: underline;
+    font-size: 11px;
+    cursor: pointer;
+}
+.login-form .have-account {
+    font-size: 11px;
+    color: gray;
+}
+.login-form .login-link {
+    color: green;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.login-form .create-account {
+    font-size: 11px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.login-form span {
+    font-size: 11px;
+    color: red;
+}
+@media(max-width: 992px) {
+    .login {
+        background-image: linear-gradient(45deg, #fffffffa, #fffffffa), url('../../images/Group\ 140.png');
+        background-size: contain;
+    }
+
+}

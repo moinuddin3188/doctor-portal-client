@@ -1,0 +1,12 @@
+.testimonial-container {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding-top: 40px;
+    background-image: url('../../../images/quote.png');
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.testimonial h5, h6 {
+    font-weight: 700;
+}

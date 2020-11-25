@@ -1,0 +1,5 @@
+@media (max-width: 400px) {
+    .business-info {
+        height: auto !important;
+    }
+}

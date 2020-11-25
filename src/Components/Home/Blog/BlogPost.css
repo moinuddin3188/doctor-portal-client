@@ -1,0 +1,45 @@
+
+.blog-post h5 {
+    font-weight: 700;
+    line-height: 29px;
+}
+.blog-post .date {
+    font-size: 14px;
+}
+.blog-post .arrow {
+    font-size: 35px;
+    font-weight: 700;
+    display: none;
+    color: #fff;
+}
+.blog-post:hover {
+    background-image: linear-gradient(90deg, #19d3af, #0fcfeb);
+    box-shadow: none !important;
+    height: 336px;
+    cursor: pointer;
+}
+.blog-post:hover h5 {
+    color: white !important;
+}
+.blog-post:hover p {
+    color: white !important;
+}
+.blog-post:hover h6 {
+    color: white !important;
+}
+.blog-post:hover .card-body {
+    background-image: url('../../../images/quote1.png');
+    background-size: 80%;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.blog-post:hover .card-body img {
+    display: none;
+}
+.blog-post:hover .card-body .post-description {
+    display: none;
+}
+.blog-post:hover .arrow {
+    display: block;
+    margin-top: 70px;
+}

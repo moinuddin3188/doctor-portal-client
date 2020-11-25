@@ -1,0 +1,42 @@
+.header-container {
+    background-image: url('../../../../images/header.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 50px 0px;
+}
+.header {
+    padding: 150px 0px
+}
+.header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #030316;
+    letter-spacing: 1px;
+    line-height: 51px;
+}
+.header img {
+    width: 92%;
+}
+.header p {
+    color: #c0c0c0;
+    margin-top: 2rem;
+    line-height: 28px;
+}
+.appointment-btn {
+    font-size: 14px;
+    margin-top: 20px
+}
+
+@media(max-width: 992px) {
+    .header {
+        padding: 50px 0;
+    }
+    .header-container {
+        background-image: url('../../../../images/Mask\ Group\ 2.png');
+        background-size: cover;
+    }
+    .header img {
+        width: 100%;
+    }
+}

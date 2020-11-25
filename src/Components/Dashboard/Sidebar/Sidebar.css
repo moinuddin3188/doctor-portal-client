@@ -1,0 +1,19 @@
+.sidebar {
+    background-image: linear-gradient(0deg, #0fcfeb, #19d3af);
+    padding: 50px 0px 30px 30px; 
+    font-size: 13px;
+}
+.dashboard-icon {
+    font-size: 15px;
+    margin-right: 1rem;
+}
+.sidebar p {
+    font-weight: 400;
+    margin-top: 30px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s;
+}
+.sidebar p:hover {
+    color: #3d3d3d !important;
+}

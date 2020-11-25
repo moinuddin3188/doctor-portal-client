@@ -1,0 +1,12 @@
+.services {
+    margin-bottom: 90px;
+}
+.services img {
+    height: 80px;
+}
+.services h1, h4 {
+    font-weight: 700;
+}
+.service-title {
+    margin-bottom: 100px;
+}
