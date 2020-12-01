@@ -121,7 +121,7 @@ const AppointmentForm = (props) => {
                     </div>
 
                     <div class="form-group row">
-                        <div class="col">
+                        <div class="col-sm col-12">
                             <input
                                 type="date"
                                 name="date"
@@ -131,7 +131,7 @@ const AppointmentForm = (props) => {
                                 ref={register({ required: true })}
                             />
                         </div>
-                        <div class="col">
+                        <div class="col-sm col-12">
                             <select className="form-control" name="appointmentWith" ref={register({ required: true })} >
                                 <option disabled={true} value="Not set">Select Doctor</option>
                                 {
@@ -148,7 +148,7 @@ const AppointmentForm = (props) => {
 
                     <div className="form-group row">
 
-                        <div className="col">
+                        <div className="col-sm col-12">
                             <select className="form-control" name="gender" ref={register({ required: true })} >
                                 <option disabled={true} value="Not set">Select Gender</option>
                                 <option value="Male">Male</option>
@@ -158,10 +158,10 @@ const AppointmentForm = (props) => {
                             {errors.gender && <span className="text-danger">This field is required</span>}
                         </div>
 
-                        <div className="col">
+                        <div className="col-sm col-12">
                             <input
                                 ref={register({ required: true })}
-                                className="form-control mt-0"
+                                className="form-control"
                                 name="age"
                                 placeholder="Your Age"
                                 type="number"
@@ -169,10 +169,10 @@ const AppointmentForm = (props) => {
                             {errors.age && <span className="text-danger">Age is required</span>}
                         </div>
 
-                        <div className="col">
+                        <div className="col-sm col-12">
                             <input
                                 ref={register({ required: true })}
-                                className="form-control mt-0"
+                                className="form-control"
                                 name="weight"
                                 placeholder="Weight"
                                 type="number"

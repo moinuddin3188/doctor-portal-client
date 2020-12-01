@@ -8,12 +8,18 @@ import { faBars, faUserCircle, faSignOutAlt, faFileAlt } from '@fortawesome/free
 
 const Navbar = () => {
 
-    const [userState, setUserState, isDoctor, isAdmin] = useContext(UserContext);
+    const [userState, setUserState, isDoctor, setIsDoctor, isAdmin, setIsAdmin] = useContext(UserContext);
     const [isUser, setIsUser] = useState(true);
 
     const history = useHistory();
     const gotoHome = () => {
         history.push('/');
+    }
+
+    const logout = () => {
+        setUserState({});
+        setIsDoctor(false);
+        setIsAdmin(false);
     }
 
     return (
@@ -71,7 +77,7 @@ const Navbar = () => {
                                         </div>
                                         <div className='py-2'>
                                             <p
-                                                onClick={() => setUserState({})}
+                                                onClick={() => logout()}
                                                 class="dropdown-item">
                                                 <FontAwesomeIcon className="mr-2" icon={faSignOutAlt} />
                                                     Logout

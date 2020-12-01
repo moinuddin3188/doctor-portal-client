@@ -49,7 +49,7 @@ function App() {
   }, [userState.email])
 
   return (
-    <UserContext.Provider value={[userState, setUserState, isDoctor, isAdmin]}>
+    <UserContext.Provider value={[userState, setUserState, isDoctor, setIsDoctor, isAdmin, setIsAdmin]}>
       <Router>
         <Switch>
           <Route exact path="/">

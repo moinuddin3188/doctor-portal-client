@@ -8,7 +8,13 @@ import { UserContext } from '../../../App';
 
 const Sidebar = () => {
 
-    const [userState, setUserState, isDoctor, isAdmin] = useContext(UserContext);
+    const [userState, setUserState, isDoctor, setIsDoctor, isAdmin, setIsAdmin] = useContext(UserContext);
+    
+    const logout = () => {
+        setUserState({});
+        setIsDoctor(false);
+        setIsAdmin(false);
+    }
 
     return (
         <div className='col-2 sidebar d-flex flex-column'>
@@ -67,7 +73,7 @@ const Sidebar = () => {
                 </Link>
             </div>
             <div className='d-flex align-items-end'>
-                <p onClick={() => {setUserState({})}} className='text-white'>
+                <p onClick={() => logout()} className='text-white'>
                     <FontAwesomeIcon className='dashboard-icon' icon={faSignOutAlt} />
                     Sign out
                 </p>

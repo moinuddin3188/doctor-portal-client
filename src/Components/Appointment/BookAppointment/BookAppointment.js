@@ -8,7 +8,7 @@ const BookAppointment = () => {
     document.title = 'Get Appointment';
 
     const [userState, setUserState] = useContext(UserContext);
-    const {date} = userState;
+    const date = new Date();
     const [appointments, setAppointments] = useState([])
 
     useEffect(() => {

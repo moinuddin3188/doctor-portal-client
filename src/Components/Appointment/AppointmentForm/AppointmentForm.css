@@ -18,6 +18,10 @@
     font-size: 13px;
     height: 40px;
 }
+#modal select {
+    margin-top: 10px;
+    height: 40px;
+}
 #modal span {
     font-size: 11px;
 }
