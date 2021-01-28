@@ -16,14 +16,22 @@ import MyAppointments from './Components/Dashboard/MyAppointments/MyAppointments
 import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 import AddDoctor from './Components/Dashboard/AddDoctor/AddDoctor';
 import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
+import NotFound from './Components/NotFound/NotFound';
+import jwt_decode from "jwt-decode";
+
 
 export const UserContext = createContext();
 
 function App() {
 
+  const token = sessionStorage.getItem('token');
+  const decoded = token && jwt_decode(token);
+
   const [userState, setUserState] = useState({
     date: new Date(),
-    email: '',
+    name: decoded && decoded.name || '',
+    email: decoded && decoded.email || '',
+    isEmailVerified: decoded && decoded.email_verified || null,
     specialistOn: ''
   })
 
@@ -84,6 +92,9 @@ function App() {
           </PrivetRoute>
           <Route path='/login'>
             <Login />
+          </Route>
+          <Route path="*">
+            <NotFound/>
           </Route>
         </Switch>
       </Router>

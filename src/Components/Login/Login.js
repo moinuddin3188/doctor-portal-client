@@ -74,6 +74,7 @@ const Login = () => {
                     email: user.email, 
                     isEmailVerified: user.emailVerified
                 });
+                getToken();
                 if (user.emailVerified) {
                     history.replace(from);
                 }
@@ -110,6 +111,16 @@ const Login = () => {
         }
 
         setUserState({ ...userState, email: userInfo.email, name: userInfo.name });
+    }
+
+    const getToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+        .then(function(idToken) {
+            // Send token to your backend via HTTPS
+            sessionStorage.setItem('token', idToken);
+          }).catch(function(error) {
+            // Handle error
+          });
     }
 
     const updateUserName = () => {
