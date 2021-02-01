@@ -18,13 +18,14 @@ import AddDoctor from './Components/Dashboard/AddDoctor/AddDoctor';
 import AddAdmin from './Components/Dashboard/AddAdmin/AddAdmin';
 import NotFound from './Components/NotFound/NotFound';
 import jwt_decode from "jwt-decode";
+import Cookies from 'js-cookie'
 
 
 export const UserContext = createContext();
 
 function App() {
 
-  const token = sessionStorage.getItem('token');
+  const token = Cookies.get('token');
   const decoded = token && jwt_decode(token);
 
   const [userState, setUserState] = useState({

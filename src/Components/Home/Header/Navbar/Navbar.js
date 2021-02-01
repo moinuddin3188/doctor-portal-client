@@ -5,6 +5,7 @@ import './Navbar.css';
 import { Link, useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUserCircle, faSignOutAlt, faFileAlt } from '@fortawesome/free-solid-svg-icons'
+import Cookies from 'js-cookie'
 
 const Navbar = () => {
 
@@ -17,9 +18,16 @@ const Navbar = () => {
     }
 
     const logout = () => {
-        setUserState({});
+        setUserState({
+            date: new Date(),
+            name: '',
+            email: '',
+            isEmailVerified: null,
+            specialistOn: ''
+        });
         setIsDoctor(false);
         setIsAdmin(false);
+        Cookies.remove('token');
     }
 
     return (
@@ -85,7 +93,7 @@ const Navbar = () => {
                                             <Link
                                                 class="dropdown-item"
                                                 to="/myAppointments">
-                                                    <FontAwesomeIcon className="mr-2" icon={faFileAlt} />
+                                                <FontAwesomeIcon className="mr-2" icon={faFileAlt} />
                                                     My Appointments
                                             </Link>
                                         </div>

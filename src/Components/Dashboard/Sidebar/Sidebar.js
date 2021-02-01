@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTh, faCalendarMinus, faHome, faUser, faFileAlt, faCog, faSignOutAlt, faPlus } from '@fortawesome/free-solid-svg-icons'
 import { UserContext } from '../../../App';
+import Cookies from 'js-cookie'
 
 
 const Sidebar = () => {
@@ -11,9 +12,16 @@ const Sidebar = () => {
     const [userState, setUserState, isDoctor, setIsDoctor, isAdmin, setIsAdmin] = useContext(UserContext);
     
     const logout = () => {
-        setUserState({});
+        setUserState({
+            date: new Date(),
+            name: '',
+            email: '',
+            isEmailVerified: null,
+            specialistOn: ''
+        });
         setIsDoctor(false);
         setIsAdmin(false);
+        Cookies.remove('token')
     }
 
     return (

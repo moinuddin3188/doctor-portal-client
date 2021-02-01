@@ -8,6 +8,7 @@ import { firebaseConfig } from '../../Firebase/Firebase';
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router-dom';
+import Cookies from 'js-cookie'
 
 
 firebase.initializeApp(firebaseConfig);
@@ -117,7 +118,7 @@ const Login = () => {
         firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
         .then(function(idToken) {
             // Send token to your backend via HTTPS
-            sessionStorage.setItem('token', idToken);
+            Cookies.set('token', idToken, { expires: 7 })
           }).catch(function(error) {
             // Handle error
           });
